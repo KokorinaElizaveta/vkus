@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/tailwinds.js"></script>
+    <script src="js/alpin.js" defer></script>
+</head>
+<body class="flex flex-col h-screen">
+    <header class="bg-amber-950 text-gray-50 py-2 font-geist-400">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between">
+        <a href="">
+            <img src="" alt="">
+            <span class="font-geist-600">Vkusnayshka</span>
+        </a>
+        <nav class="space-x-4">
+            <a href="" class="hover:text-orange-400 duration-300">О нас</a>
+            <a href="" class="hover:text-orange-400 duration-300">Меню</a>
+            <a href="" class="hover:text-orange-400 duration-300">Где нас найти?</a>
+            <a href="" class="hover:text-orange-400 duration-300">Товар</a>
+            <a href="" class="hover:text-orange-400 duration-300">UserPanel</a>
+            <a href="" class="hover:text-orange-400 duration-300">AdminPanel</a>
+        </nav>
+        <ul class="flex gap-x-4 font-geist-200">
+            <li><a href="">Вход</a></li>
+            <li><a href="">Регистрация</a></li>
+            <li><a href="">Выход</a></li>
+        </ul>
+        </div>
+    </header>
+    <main class="flex-grow py-8">
+        <div class="container mx-auto space-y-6">
+            <h1 class="font-geist-900 text-3xl">О нас</h1>
+            <p class="font-geist-200 text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati cum excepturi ratione, nostrum, ad est nemo quis expedita eum repudiandae. Voluptatum, reiciendis repellendus? Quasi labore unde numquam culpa deserunt?
+            </p>
+            <div class="font-geist-400 flex w-full items-center gap-x-2" x-data="{
+                i: 1,
+                items: ['eda.jpg', 'eda2.jpg', 'eda3.jpg', 'eda4.jpg', 'eda5.jpg']
+            }">
+                <div class="bg-amber-800 w-6 h-6 rounded-full text-gray-50 text-center font-geist-900 cursor-pointer" @click=" i<=0 ? i=4 : i--"><</div>
+                <div class="h-[600px] w-full bg-gray-100 flex-grow">
+                    <div x-text="i"></div>
+                    <img x-bind:src="'images/slider/'+items[i]+''" alt="" class="h-full w-full object-cover">
+                </div>
+                <div class="bg-amber-800 w-6 h-6 rounded-full text-gray-50 text-center font-geist-900 cursor-pointer" @click=" i>=4 ? i=0 : i++">></div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-amber-950 text-gray-50 py-2 text-center">footer</footer>
+</body>
+</html>
